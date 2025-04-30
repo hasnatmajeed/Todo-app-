@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to right, #e0eafc, #cfdef3);
@@ -29,6 +30,7 @@ body {
   margin-right: auto;
 }
 
+/* Input Field Styles */
 #todoInput,
 #todoDate {
   font-size: 16px;
@@ -48,14 +50,18 @@ body {
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
+/* Button Styles */
 .btn-delete,
 .btn-todo {
-  padding: 12px;
+  padding: 12px 20px; /* Adjusted for better responsiveness */
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-weight: bold;
+  font-size: 1rem; /* Adjusted font size for better readability */
+  width: 100%; /* Ensures full width on smaller screens */
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
 }
 
 .btn-delete {
@@ -68,6 +74,7 @@ body {
   color: white;
 }
 
+/* Hover Effects */
 .btn-delete:hover {
   background-color: #c0392b;
   transform: scale(1.05);
@@ -76,4 +83,19 @@ body {
 .btn-todo:hover {
   background-color: #27ae60;
   transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid-contaier {
+    grid-template-columns: 1fr; /* Stacks grid items on smaller screens */
+    padding: 15px;
+  }
+  
+  /* Buttons adjustment for small screens */
+  .btn-delete,
+  .btn-todo {
+    padding: 10px 0; /* Reduced padding for better fit */
+    font-size: 1rem; /* Adjust font size on smaller screens */
+  }
 }
